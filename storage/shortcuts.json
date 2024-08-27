@@ -1,0 +1,45 @@
+
+{
+    "devices": [
+        {
+            "name": "Launchkey Mini 0",
+            "type": "midi",
+            "inputs": [
+                {
+                    "type": "note_on",
+                    "channel": 1,
+                    "note": 60,
+                    "output": {
+                        "type": "openapp",
+                        "params": {
+                            "app": "notepad"
+                        }    
+                    }
+                },
+                {
+                    "type": "control_change",
+                    "channel": 0,
+                    "control": 21,
+                    "output": {
+                        "type": "volume",
+                        "params": {
+                            "app": "master"
+                        }    
+                    }
+                },
+                {
+                    "type": "control_change",
+                    "channel": 0,
+                    "control": 22,
+                    "output": {
+                        "type": "volume",
+                        "params": {
+                            "app": "spotify"
+                        }    
+                    }
+                }
+            ]
+        }
+    ]
+}    
+
