@@ -1,4 +1,3 @@
-
 {
     "devices": [
         {
@@ -7,12 +6,25 @@
             "inputs": [
                 {
                     "type": "note_on",
-                    "channel": 1,
-                    "note": 60,
+                    "channel": 9,
+                    "note": 40,
                     "output": {
-                        "type": "openapp",
+                        "type": "open_web_page",
                         "params": {
-                            "app": "notepad"
+                            "app": "chrome.exe",
+                            "url": "https://www.notion.so"
+                        }    
+                    }
+                },
+                {
+                    "type": "note_on",
+                    "channel": 9,
+                    "note": 41,
+                    "output": {
+                        "type": "open_app",
+                        "params": {
+                            "app": "notepad",
+                            "path": ["C:\\Users\\user\\Desktop\\test.txt"]
                         }    
                     }
                 },
@@ -34,7 +46,18 @@
                     "output": {
                         "type": "volume",
                         "params": {
-                            "app": "spotify"
+                            "app": "spotify.exe"
+                        }    
+                    }
+                },
+                {
+                    "type": "control_change",
+                    "channel": 0,
+                    "control": 23,
+                    "output": {
+                        "type": "volume",
+                        "params": {
+                            "app": "chrome.exe"
                         }    
                     }
                 }
@@ -42,4 +65,3 @@
         }
     ]
 }    
-

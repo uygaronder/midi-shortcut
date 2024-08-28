@@ -1,5 +1,4 @@
 from modules.midi_handler import midi_listener
-from modules.system_controller import set_volume
 from modules.data_manager import load_data, save_data
 
 file_path = "storage/shortcuts.json"
