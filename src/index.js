@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = () => (
+import App from './App';
+
+const Index = () => (
     <div>
-        <h1>Hello from React in Electron!</h1>
+        <App />
     </div>
 );
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Index />, document.getElementById('root'));
