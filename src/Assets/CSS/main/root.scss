@@ -1,0 +1,54 @@
+:root {
+    --font-family: 'Roboto', sans-serif;
+    --font-size: 16px;
+    --black: #000;
+    --white: #fff;
+
+    --color-background-primary: #2C2F33;
+    --color-background-secondary: #23272A;
+    --color-background-border: #99AAB5;
+
+    --color-accent: #7289DA;
+    --color-highlight: #99AAB5;
+
+    --color-text: #FFFFFF;
+    --color-text-muted: #B9BBBE;
+
+    --border-light: 1px solid #99AAB5;
+
+    --svg-filter: invert(100%);
+
+    --spacing: 1rem;
+    --spacing-half: 0.5rem;
+    --spacing-double: 2rem;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: 1.5;
+    color: var(--color-text);
+    background-color: var(--color-background-primary);
+    height: 100vh;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.svg{
+    filter: var(--svg-filter);
+}

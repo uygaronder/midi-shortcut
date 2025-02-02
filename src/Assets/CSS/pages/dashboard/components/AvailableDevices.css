@@ -1,0 +1,34 @@
+.available-devices {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: var(--border-light);
+}
+.available-devices .devices {
+  display: flex;
+  overflow: auto;
+}
+.available-devices .devices .device {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: var(--spacing);
+  text-align: center;
+}
+.available-devices .devices .device .device-logo {
+  filter: brightness(75%);
+}
+.available-devices .devices .device .device-logo img {
+  width: 80px;
+  height: 80px;
+}
+.available-devices .devices .device .device-nickname {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.available-devices .devices .device .device-name {
+  font-size: 0.5rem;
+  font-weight: 500;
+}
+.available-devices .devices .device.glow .device-logo {
+  filter: brightness(100%);
+}/*# sourceMappingURL=AvailableDevices.css.map */

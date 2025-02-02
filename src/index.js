@@ -1,12 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import App from './App';
 
 const Index = () => (
-    <div>
-        <App />
-    </div>
+    <App />
 );
 
-ReactDOM.render(<Index />, document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
+root.render(<Index />);

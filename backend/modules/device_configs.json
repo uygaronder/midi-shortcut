@@ -1,0 +1,98 @@
+[
+  {
+    "device": {
+      "type": "midi",
+      "name": "Launchkey Mini 0"
+    },
+    "config": {
+      "displayName": "Launchkey Mini 0",
+      "logo": "piano",
+      "color": "#ffffff",
+      "shortcuts": {}
+    }
+  },
+  {
+    "device": {
+      "type": "midi",
+      "name": "MIDIIN2 (Launchkey Mini) 1"
+    },
+    "config": {
+      "displayName": "MIDIIN2 (Launchkey Mini) 1",
+      "logo": "piano",
+      "color": "#ffffff",
+      "shortcuts": {}
+    }
+  },
+  {
+    "device": {
+      "type": "keyboard",
+      "name": "\\\\?\\HID#VID_046D&PID_C534&MI_00#8&3841463c&0&0000#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}"
+    },
+    "config": {
+      "displayName": "\\\\?\\HID#VID_046D&PID_C534&MI_00#8&3841463c&0&0000#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}",
+      "logo": "",
+      "color": "#ffffff",
+      "shortcuts": {}
+    }
+  },
+  {
+    "device": {
+      "type": "keyboard",
+      "name": "\\\\?\\HID#VID_04F3&PID_152E&MI_01&Col04#9&15b91bfd&0&0003#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}"
+    },
+    "config": {
+      "displayName": "\\\\?\\HID#VID_04F3&PID_152E&MI_01&Col04#9&15b91bfd&0&0003#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}",
+      "logo": "",
+      "color": "#ffffff",
+      "shortcuts": {}
+    }
+  },
+  {
+    "device": {
+      "type": "keyboard",
+      "name": "\\\\?\\HID#VID_04F3&PID_152E&MI_01&Col03#9&15b91bfd&0&0002#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}"
+    },
+    "config": {
+      "displayName": "\\\\?\\HID#VID_04F3&PID_152E&MI_01&Col03#9&15b91bfd&0&0002#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}",
+      "logo": "",
+      "color": "#ffffff",
+      "shortcuts": {}
+    }
+  },
+  {
+    "device": {
+      "type": "keyboard",
+      "name": "\\\\?\\HID#VID_04F3&PID_152E&MI_00#9&e1e21c5&0&0000#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}"
+    },
+    "config": {
+      "displayName": "\\\\?\\HID#VID_04F3&PID_152E&MI_00#9&e1e21c5&0&0000#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}",
+      "logo": "",
+      "color": "#ffffff",
+      "shortcuts": {}
+    }
+  },
+  {
+    "device": {
+      "type": "keyboard",
+      "name": "\\\\?\\HID#VID_046D&PID_C52B&MI_00#8&2c4ec246&0&0000#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}"
+    },
+    "config": {
+      "displayName": "\\\\?\\HID#VID_046D&PID_C52B&MI_00#8&2c4ec246&0&0000#{884b96c3-56ef-11d1-bc8c-00a0c91405dd}",
+      "logo": "",
+      "color": "#ffffff",
+      "shortcuts": {}
+    }
+  },
+  {
+    "device": {
+      "type": "other",
+      "name": "Microsoft Mouse"
+    },
+    "config": {
+      "displayName": "Microsoft Mouse",
+      "logo": "",
+      "color": "#ffffff",
+      "shortcuts": {}
+    }
+  }
+]

@@ -1,2 +1,8 @@
 # Add your project dependencies here
 # Example: Django>=3.0.1
+Flask>=1.1.2
+Flask-Cors>=3.0.10
+Flask-SocketIO>=5.0.1
+mido>=1.2.9
+python-rtmidi>=1.4.6
+Inputs>=0.4.0

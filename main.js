@@ -14,6 +14,7 @@ function createWindow() {
 
     // Load the HTML file from the build output
     win.loadFile(path.join(__dirname, 'dist', 'index.html'));
+    win.webContents.openDevTools();
 }
 
 app.whenReady().then(() => {

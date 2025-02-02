@@ -1,0 +1,7 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: var(--spacing) var(--spacing-double);
+    width: 100%;
+}
