@@ -1,3 +1,29 @@
 .device-detail-panel{
     height: 100%;
+    .device-info{
+        display: flex;
+        .device-logo{
+            border: var(--border-light);
+            margin-right: var(--spacing);
+            border-radius: 50%;
+            padding: var(--spacing);
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+        .device-edit-inputs{
+            input{
+                background-color: transparent;
+                border: none;
+                border-bottom: var(--border-light);
+                margin-bottom: var(--spacing);
+                width: 100%;
+                font-size: 1rem;
+                font-weight: 500;
+                outline: none;
+                color: var(--text-color);
+            }
+        }
+    }
 }

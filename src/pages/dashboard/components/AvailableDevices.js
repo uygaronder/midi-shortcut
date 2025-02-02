@@ -8,6 +8,7 @@ import Mouse from "../../../Assets/SVG/mouse.svg";
 import Gamepad from "../../../Assets/SVG/gamepad.svg";
 
 import { useRawInput } from '../../../contexts/rawInputContext';
+import { deviceIcons } from '../../../utils/logos';
 
 
 
@@ -45,10 +46,7 @@ const AvailableDevices = ({ onSelectDevice }) => {
                         return (
                         <div key={device.name} className={`device ${isGlowing ? 'glow' : ''}`} onClick={() => onSelectDevice(device)}>
                           <span className='device-logo'>
-                            {deviceType === 'keyboard' && <img src={Keyboard} className='svg' alt='Keyboard' />}
-                            {deviceType === 'midi' && <img src={Piano} className='svg' alt='Piano' />}
-                            {deviceType === 'other' && <img src={Mouse} className='svg' alt='Mouse' />}
-                            {deviceType === 'gamepad' && <img src={Gamepad} className='svg' alt='Gamepad' />}
+                            <img src={deviceIcons[device.config.logo]} className='svg' alt={`${device.name} logo`} />
                           </span>
                           <span className='device-nickname'>Unnamed Device</span>
                           <span className='device-name' title={device}>{device.name.substring(0, 25) + "..."}</span>
