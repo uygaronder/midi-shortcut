@@ -1,19 +1,18 @@
 import React from 'react';
 import '../../Assets/CSS/components/SideMenu.css';
 
+import homeIcon from '../../Assets/SVG/home.svg';
+import settingsIcon from '../../Assets/SVG/settings.svg';
+
 const SideMenu = () => {
     return (
         <div className="side-menu">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home"><img src={homeIcon} alt="Home" className='svg' /></a></li>
             </ul>
             
             <ul>
-                <li><a href="#settings">Settings</a></li>
-                <li><a href="#logout">Logout</a></li>
+                <li><a href="#settings"><img src={settingsIcon} alt="Settings" className='svg' /></a></li>
             </ul>
         </div>
     );

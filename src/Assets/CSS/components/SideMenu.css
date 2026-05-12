@@ -1,11 +1,22 @@
 .side-menu {
   display: flex;
-  justify-content: space-between;
   height: 100%;
   border-right: 1px solid var(--color-background-border);
   flex-direction: column;
-  padding: var(--spacing);
+  padding: var(--spacing-half);
 }
 .side-menu ul {
   list-style-type: none;
+}
+.side-menu ul a {
+  padding: var(--spacing);
+  display: flex;
+  border-radius: var(--border-radius);
+  transition: background-color 0.2s ease;
+}
+.side-menu ul a:hover {
+  background-color: var(--color-background-secondary);
+}
+.side-menu ul:first-child {
+  margin-bottom: var(--spacing-half);
 }/*# sourceMappingURL=SideMenu.css.map */

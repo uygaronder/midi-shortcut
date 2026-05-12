@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import '../../../../Assets/CSS/pages/dashboard/components/DeviceDetailPanel.css';
 
+import DeviceKeybinds from '../deviceKeybinds/DeviceKeybinds';
+
 import { useRawInput } from '../../../../contexts/rawInputContext';
 import { deviceIcons } from '../../../../utils/logos';
 
@@ -26,15 +28,31 @@ const DeviceDetailPanel = ({ selectedDevice }) => {
         setDeviceName(e.target.value);
     };
 
+    useEffect(() => {
+        setDeviceName(selectedDevice.config.displayName);
+        setDeviceRawEvent(null);
+
+        // Open the MIDI port when device is selected
+        if (window.electronAPI && selectedDevice.name) {
+            window.electronAPI.openMidiPort(selectedDevice.name)
+                .then(() => console.log('MIDI port opened:', selectedDevice.name))
+                .catch(err => console.error('Failed to open MIDI port:', err));
+        }
+
+        // Close the port when we switch away
+        return () => {
+            if (window.electronAPI && selectedDevice.name) {
+                window.electronAPI.closeMidiPort(selectedDevice.name);
+            }
+        };
+    }, [selectedDevice]);
+
     return (
         <div className='device-detail-panel'>
             <div className='device-info'>
-                <div className='device-logo'>
+                {/* <div className='device-logo'>
                     <img src={selectedDevice.config.logo == "" ? deviceIcons.keyboard : deviceIcons[selectedDevice.config.logo]} className='svg' alt={`${selectedDevice.name} logo`} />
-                </div>
-                <div className='device-edit-inputs'>
-                    <input type='text' placeholder='Device Name' value={deviceName} onChange={(e) => handleDeviceNameChange(e)} />
-                </div>
+                </div> */}
                 <div className='device-settings'>
                     <div className='device-active-switch'>
                         <label htmlFor='device-active-switch'>Active</label>
@@ -54,6 +72,7 @@ const DeviceDetailPanel = ({ selectedDevice }) => {
                 </div>
 
             </div>
+            <DeviceKeybinds deviceRawEvent={deviceRawEvent} />
         </div>
     );
 }

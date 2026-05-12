@@ -24,4 +24,7 @@
   font-weight: 500;
   outline: none;
   color: var(--text-color);
+}
+.device-detail-panel .device-input {
+  margin-top: 15px;
 }/*# sourceMappingURL=DeviceDetailPanel.css.map */

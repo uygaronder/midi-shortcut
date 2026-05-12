@@ -21,6 +21,8 @@
     --spacing: 1rem;
     --spacing-half: 0.5rem;
     --spacing-double: 2rem;
+    --border-radius: 8px;
+    --transition: all 0.2s ease;
 }
 
 *, *::before, *::after {
@@ -51,4 +53,18 @@ a {
 
 .svg{
     filter: var(--svg-filter);
+}
+
+.button-1{
+    background-color: transparent;
+    border: var(--border-light);
+    padding: var(--spacing);
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-radius: 8px;
+    &:hover{
+        background-color: var(--color-background-secondary);
+    }
 }

@@ -1,25 +1,22 @@
-// src/hooks/useRawInputEvents.js
-import { useState, useEffect, useRef } from 'react';
-import io from 'socket.io-client';
+import { useState, useEffect } from 'react';
 
 const useRawInputEvents = () => {
   const [rawEvent, setRawEvent] = useState(null);
 
   useEffect(() => {
-    const socket = io("http://localhost:5000");
+    // Check we're running inside Electron
+    if (!window.electronAPI) {
+      console.warn('electronAPI not available — are you running in Electron?');
+      return;
+    }
 
-    socket.on("connect", () => {
-      console.log("Socket.IO connected:", socket.id);
+    // Subscribe to MIDI/input events from main process
+    const unsubscribe = window.electronAPI.onRawInputEvent((event) => {
+      setRawEvent(event);
     });
 
-    socket.on("raw_input_event", (data) => {
-      console.log("Received raw input event:", data);
-      setRawEvent(data);
-    });
-
-    return () => {
-      socket.disconnect();
-    };
+    // Cleanup when component unmounts
+    return () => unsubscribe();
   }, []);
 
   return rawEvent;
