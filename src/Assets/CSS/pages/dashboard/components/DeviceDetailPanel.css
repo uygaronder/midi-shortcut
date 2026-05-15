@@ -3,6 +3,8 @@
 }
 .device-detail-panel .device-info {
   display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .device-detail-panel .device-info .device-logo {
   border: var(--border-light);

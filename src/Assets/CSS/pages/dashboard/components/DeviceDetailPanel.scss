@@ -2,6 +2,8 @@
     height: 100%;
     .device-info{
         display: flex;
+        flex-direction: row;
+        align-items: center;
         .device-logo{
             border: var(--border-light);
             margin-right: var(--spacing);

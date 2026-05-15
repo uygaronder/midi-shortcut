@@ -31,18 +31,37 @@ const AvailableDevices = ({ onSelectDevice }) => {
 
     return (
         <div className='available-devices'>
-            {/* <h3>Available Devices</h3> */}
+            <span className='device-upper-menu'>
+                <h3>Available Devices</h3>
+                <button className='refresh-button button-1' onClick={() => {}}>Refresh Devices</button>
+            </span>
             <div className='devices'>
                 {Object.keys(devices).map((deviceType) => (
                     devices[deviceType].map((device) => {
                         const isGlowing = glowMap[device.name];
+
+                        const handleDeviceClick = (event) => {
+                            onSelectDevice(device);
+                        };
+
                         return (
-                            <div key={device.name} className={`device ${isGlowing ? 'glow' : ''}`} onClick={() => onSelectDevice(device)}>
-                                <span className='device-logo'>
-                                    <img src={deviceIcons[device.config?.logo]} className='svg' alt={`${device.name} logo`} />
-                                </span>
-                                <span className='device-nickname'>{device.config?.displayName || 'Unnamed Device'}</span>
-                                <span className='device-name' title={device.name}>{device.name.substring(0, 25)}...</span>
+                            <div key={device.name} className={`device ${isGlowing ? 'glow' : ''}`}>
+                                <div className='device-info-container' onClick={handleDeviceClick}>
+                                    <span className='device-logo'>
+                                        <img src={deviceIcons[device.config?.logo]} className='svg' alt={`${device.name} logo`} />
+                                    </span>
+                                    <span className='device-details'>
+                                        <span className='device-nickname'>{device.config?.displayName || 'Unnamed Device'}</span>
+                                        <span className='device-name' title={device.name}>{device.name.substring(0, 25)}...</span>
+                                    </span>
+                                </div>
+                                <div className="device-buttons">
+                                    <div className='device-active-toggle'>
+                                        <label htmlFor={`active-toggle-${device.name}`}>Active</label>
+                                        <input type='checkbox' id={`active-toggle-${device.name}`} />
+                                    </div>
+                                    <button className='dontrun button-2'>Change Nickname</button>
+                                </div>
                             </div>
                         );
                     })

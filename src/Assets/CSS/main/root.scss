@@ -20,6 +20,7 @@
 
     --spacing: 1rem;
     --spacing-half: 0.5rem;
+    --spacing-quarter: 0.25rem;
     --spacing-double: 2rem;
     --border-radius: 8px;
     --transition: all 0.2s ease;
@@ -66,5 +67,31 @@ a {
     border-radius: 8px;
     &:hover{
         background-color: var(--color-background-secondary);
+    }
+}
+
+.button-2{
+    background-color: transparent;
+    border: var(--border-light);
+    padding: var(--spacing-half);
+    color: var(--text-color);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-radius: 8px;
+    &:hover{
+        background-color: var(--color-background-secondary);
+    }
+}
+
+.back-button{
+    border-radius: 50%;
+    padding: var(--spacing-quarter);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: var(--spacing);
+    img{
+        transform: rotate(270deg);
     }
 }

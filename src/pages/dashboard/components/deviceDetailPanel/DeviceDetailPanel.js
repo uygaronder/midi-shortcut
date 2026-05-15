@@ -7,8 +7,10 @@ import DeviceKeybinds from '../deviceKeybinds/DeviceKeybinds';
 import { useRawInput } from '../../../../contexts/rawInputContext';
 import { deviceIcons } from '../../../../utils/logos';
 
+import Chevron from '../../../../Assets/SVG/chevron-up.svg';
 
-const DeviceDetailPanel = ({ selectedDevice }) => {
+
+const DeviceDetailPanel = ({ selectedDevice, onBack }) => {
     const [deviceName, setDeviceName] = useState(selectedDevice.config.displayName);
     const [deviceRawEvent, setDeviceRawEvent] = useState(null);
     const rawEvent = useRawInput();
@@ -50,9 +52,9 @@ const DeviceDetailPanel = ({ selectedDevice }) => {
     return (
         <div className='device-detail-panel'>
             <div className='device-info'>
-                {/* <div className='device-logo'>
-                    <img src={selectedDevice.config.logo == "" ? deviceIcons.keyboard : deviceIcons[selectedDevice.config.logo]} className='svg' alt={`${selectedDevice.name} logo`} />
-                </div> */}
+                <button className='back-button button-2' onClick={onBack}>
+                    <img src={Chevron} alt='Back' className='svg' />
+                </button>
                 <div className='device-settings'>
                     <div className='device-active-switch'>
                         <label htmlFor='device-active-switch'>Active</label>

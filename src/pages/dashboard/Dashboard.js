@@ -16,11 +16,15 @@ const Dashboard = () => {
 
     return (
         <div className='dashboard'>
-            <AvailableDevices onSelectDevice={handleSelectDevice} />
             {
+                !selectedDevice ? 
+                <AvailableDevices onSelectDevice={handleSelectDevice} />:
+                <DeviceDetailPanel selectedDevice={selectedDevice} onBack={() => setSelectedDevice(null)} />
+            }
+            {/*
                 !selectedDevice ? <div className='no-device-selected'>No device selected</div> : 
                 <DeviceDetailPanel selectedDevice={selectedDevice} />
-            }
+            */}
         </div>
     );
 };
