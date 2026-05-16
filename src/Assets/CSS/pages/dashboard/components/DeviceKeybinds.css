@@ -1,3 +1,16 @@
 .device-keybinds {
-  margin-top: 20px;
+  margin-top: var(--spacing);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-background-border);
+}
+.device-keybinds .add-keybind-container {
+  margin-bottom: var(--spacing);
+}
+.device-keybinds .keybinds-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-background-border);
+  padding: var(--spacing);
+  height: 100%;
 }/*# sourceMappingURL=DeviceKeybinds.css.map */

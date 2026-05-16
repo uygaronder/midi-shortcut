@@ -1,5 +1,17 @@
 .device-keybinds{
-    margin-top: 20px;
+    margin-top: var(--spacing);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-background-border);
+    
     .add-keybind-container{
+        margin-bottom: var(--spacing);
+    }
+    .keybinds-list{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--color-background-border);
+        padding: var(--spacing);
+        height: 100%;
     }
 }

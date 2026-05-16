@@ -13,7 +13,6 @@ const DeviceKeybinds = ({ deviceRawEvent }) => {
                 <button className="add-keybind-button button-1">Add Shortcut</button>
             </div>
             <div className="keybinds-list">
-                
             </div>
         </div>
     );
